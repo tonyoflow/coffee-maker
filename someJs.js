@@ -5,52 +5,35 @@ window.onload = function(){
 	let initB = document.getElementById("initB");
 	let makeB = document.getElementById("makeB");
 	let resultS = document.getElementById("resultS");
-	let statesA = ["notReady","pending..","pending...","ready","done"];
+	let statesA = ["notReady","pending..","pending...","ready!","done!"];
 	
 	window.console.log('some vars are statesA:'+statesA+'initB:'+initB+'makeB:'+makeB+'result:'+resultS);
 	
 	var inx1 = 0;
-	inx1 = statesA[inx1]
-	window.console.log('No buttons pushed. current state: '+inx1);
+	var inx2 =0;
+	inx2 = statesA[inx1];
+
+	window.console.log("No buttons pushed. inx1 ="+inx1+" and inx2 = "+inx2);
 	
-	function initilizeF (inx1) {
+	function updateDisplayF(){
 		
-		inx1 = 1;
-		window.console.log('initilizing started : '+inx1);
+		let disp = document.getElementById("resultDiv")
+		inx2 = statesA[inx1];
+		disp = inx2;
+		window.console.log("update display runs. inx1 ="+inx1+" and inx2 = "+disp);
+	};
+	
+	function initilizeF () {
 		
-		nextStep = function () {
-			//resultS.p.innerHTML(statesA[inx1]);
-			window.console.log(statesA[inx1]+' -_- '+inx1);
-			inx1 +=1;
-			window.console.log(statesA[inx1]+' -_- '+inx1);
+		inx1+=1;
+		updateDisplayF();
+		
+		for (i=0; i<2; i++) {
+			setTimeout(function(){inx1+=1;updateDisplayF();},5500);
+			
 			
 		};
 		
-		do {
-			window.console.log('started do loop: '+statesA[inx1]);
-				
-				setTimeout( function (){nextStep()},2300);
-				
-				window.console.log('after timeout?: '+inx1);
-				
-				
-				if(inx1==2){
-					inx1=3;
-					window.console.log(statesA[inx1]);
-					//resultS.innerHTML(statesA[inx1]);
-				
-					return false;
-				}
-				
-				//return inx1;
-			
-		} while (inx1 <= 2);
-				
-		
-		
-		
-		window.console.log(statesA[inx1]);
-		return inx1;
 	};	
 	
 	
@@ -62,7 +45,10 @@ window.onload = function(){
 		}
 	};
 	
+	
+	
 	initB.addEventListener("click", initilizeF, false);
 	initB.addEventListener("click", makeCoffeeF, false);
+	//inx1.addListener("onchange",updateDispayF, false);
 	return 0;
 };	

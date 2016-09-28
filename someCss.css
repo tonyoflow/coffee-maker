@@ -10,7 +10,7 @@
 	
 }
 /*button design*/
-.buttons {
+.buttons, #resultDiv  {
 	
 	width: 110px;
 	height: 40px;
@@ -24,7 +24,7 @@
 	text-align: center;
 	
 }
-.buttons p {
+.buttons p, #resultDiv.p {
 	cursor: default;
  font-family: impact;	
 -webkit-touch-callout: none;
@@ -33,4 +33,19 @@
 -moz-user-select: none;
 /* -ms-user-select: none;
 user-select: none; */
+}
+#resultS {
+	font-family: system;
+	color: green;
+	height: 34px;
+	width: 110px;
+	z-index: -1;
+	float: left;
+	margin: 2.2px;
+	border: 3px solid black;
+	border-color: black;
+	background-color: #d2d2d3;
+	
+	text-align: center;
+	
 }
