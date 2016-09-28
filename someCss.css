@@ -1,0 +1,36 @@
+/*wrapper*/
+#mainDiv {
+	width: 420px;
+	height: 350px;
+	border: 3px solid;
+	margin: 2px;
+	padding: 3px;
+	background-color: gray;
+	
+	
+}
+/*button design*/
+.buttons {
+	
+	width: 110px;
+	height: 40px;
+	z-index: -1;
+	float: left;
+	margin: 2.2px;
+	border: 3px solid black;
+	border-color: black;
+	background-color: #d2d2d3;
+	
+	text-align: center;
+	
+}
+.buttons p {
+	cursor: default;
+ font-family: impact;	
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+/*-khtml-user-select: none; */
+-moz-user-select: none;
+/* -ms-user-select: none;
+user-select: none; */
+}
