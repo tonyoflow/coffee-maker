@@ -24,7 +24,7 @@
 	text-align: center;
 	
 }
-.buttons p, #resultDiv.p {
+.buttons p {
 	cursor: default;
  font-family: impact;	
 -webkit-touch-callout: none;
@@ -35,9 +35,9 @@
 user-select: none; */
 }
 #resultS {
-	font-family: system;
+	font-family: Terminal;
 	color: green;
-	height: 34px;
+	height: 40px;
 	width: 110px;
 	z-index: -1;
 	float: left;
