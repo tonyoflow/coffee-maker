@@ -35,7 +35,7 @@ window.onload = function(){
 		for (i=0; i<2; i++) {
 			
 			//delay for the illusion of heavy program lol
-			setTimeout(function(){inx1+=1;updateDisplayF();},5500);
+			setTimeout(function(){inx1+=1;updateDisplayF();},2500);
 			
 			
 		};
@@ -43,9 +43,43 @@ window.onload = function(){
 	};	
 	//defines what happens when pressing Make button
 	function makeCoffeeF () {
-		window.alert('no! don\'t press this! the function is yet under construction!');
+		
+		//check if ready else: errors everywhere
+		if (inx1 = 3) {
+			
+			function pending1(){
+				inx1=1;
+				updateDisplayF();
+			};
+			function pending2(){
+				inx1=2;
+				updateDisplayF();
+			};
+			function ready1(){
+				inx1=4;
+				updateDisplayF();
+				};
+				
+			setTimeout(pending1,500);
+			setTimeout(pending2,1500);
+			setTimeout(pending1,2500);
+			setTimeout(ready1,3500);
+			
+		}
+		else if(inx1 != 3) {
+			inx1 = 5;
+			updateDisplayF();
+			
+		}
+		else {
+			//window.alert('no! don\'t press this! the function is yet under construction!');
+			window.log('wtf happened? o_O');
+			
 		inx1 = 5;
 		updateDisplayF();
+			
+		};
+		
 	};
 	
 	
