@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'digital-7';
+  src: url('./fonts/digital-7.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+}
+
+
 /*wrapper*/
 #mainDiv {
 	width: 420px;
@@ -5,28 +12,30 @@
 	border: 3px solid;
 	margin: 2px;
 	padding: 3px;
-	background-color: gray;
-	
-	
+	background-image: url('./pictures/round-table-coffeemaker.jpg');
+	// background-color: blue;
+
+
 }
 /*button design*/
 .buttons, #resultDiv  {
-	
+
 	width: 110px;
 	height: 40px;
 	z-index: -1;
 	float: left;
 	margin: 2.2px;
-	border: 3px solid black;
+	border: 2px solid black;
+	border-radius: 21%;
 	border-color: black;
 	background-color: #d2d2d3;
-	
+
 	text-align: center;
-	
+
 }
 .buttons p {
 	cursor: default;
- font-family: impact;	
+ font-family: impact;
 -webkit-touch-callout: none;
 -webkit-user-select: none;
 /*-khtml-user-select: none; */
@@ -35,17 +44,19 @@
 user-select: none; */
 }
 #resultS {
-	font-family: Terminal;
+	font-family: 'digital-7', sans-serif;
+	font-size: 18px;
 	color: green;
-	height: 40px;
-	width: 110px;
+	height: 17px;
+	width: 104px;
+	padding: 5px 0;
 	z-index: -1;
 	float: left;
-	margin: 2.2px;
-	border: 3px solid black;
-	border-color: black;
-	background-color: #d2d2d3;
-	
+	margin: 4px 0px 0px 2.2px;
+	border: 1px solid black;
+	border-color: darkgray;
+	background-color: black;
+
 	text-align: center;
-	
+
 }
